@@ -15,7 +15,7 @@ const BeerItem = (props) => {
         onRightClick(items); // Передати обраний елемент до батьківського компонента
     };
     const isOpenModal = (e) => {
-        if (e.target.type === "button" ||e.target.type === "svg" ||e.target.tagName === "path" ) return;
+        if (e.target.type === "button" || e.target.type === "svg" || e.target.tagName === "path") return;
         toggle();
     }
 
@@ -34,8 +34,8 @@ const BeerItem = (props) => {
                 <p>Вперше зварено: <span>{first_brewed}</span></p>
                 <p>Вміст спирту: <span>{abv}</span></p>
                 <p>Гіркота: <span>{ibu}</span></p>
-                <p>Колір по EBC: <span>{ebc}</span></p>
-                <p>Колір по SRM:  <span>{srm}</span></p>
+                <p>Колір по EBC: <span>{ebc ? ebc : "no data"}</span></p>
+                <p>Колір по SRM:  <span>{srm ? srm : "no data"}</span></p>
                 <p>ph: <span>{ph}</span></p>
             </div>
             <div>

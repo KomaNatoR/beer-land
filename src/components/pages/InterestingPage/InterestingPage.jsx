@@ -27,6 +27,7 @@ const InterestingPage = () => {
                 Тепер залишилося лише закріпити експеримент — і технології можна буде продавати в масу.
                 А автор винаходу вигадав, як назвати сорт пива — «Очманілий ель».
             </p>
+            <a href="https://www.youtube.com/@beercult">YouTube: Культ пива!</a>
 
             <Link to="/beerlist" style={{marginBottom:"15px"}}>
                 <FaBeer />
