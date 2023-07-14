@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/beer-land/static/css/main.7acaea2f.css",
-    "main.js": "/beer-land/static/js/main.602308a7.js",
+    "main.js": "/beer-land/static/js/main.b6e2ee2f.js",
     "index.html": "/beer-land/index.html",
     "main.7acaea2f.css.map": "/beer-land/static/css/main.7acaea2f.css.map",
-    "main.602308a7.js.map": "/beer-land/static/js/main.602308a7.js.map"
+    "main.b6e2ee2f.js.map": "/beer-land/static/js/main.b6e2ee2f.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.602308a7.js"
+    "static/js/main.b6e2ee2f.js"
   ]
 }
