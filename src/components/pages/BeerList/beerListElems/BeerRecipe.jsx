@@ -14,7 +14,7 @@ const BeerRecipe = ({itemData}) => {
 
     return (
         <BeerRecipeStyled>
-            <h2>Receipe:</h2>
+            <h2>Recipe:</h2>
             <p>Виробник: <span>{contributed_by.slice(0, contributed_by.length - 12)}</span></p>
             <div>Інгредієнти:
                 <ul style={{listStyle:"none",margin:"0",paddingLeft:"20px"}}>
