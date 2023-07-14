@@ -21,6 +21,22 @@ export const BeerItemStyled = styled.div`
         width: 100%;
         padding: 20px 5px;
 
+        
+        .btn_remove {
+            position: absolute;
+            top: 5px;
+            // left: 0;
+            right: 5px;
+            z-index: 2;
+
+            width: 32px;
+            height: 32px;
+
+            background: ${({ theme }) => theme.colors.yellow};
+            border: 2px solid ${({ theme }) => theme.colors.blue};
+            border-radius: 50%;
+            cursor: pointer;
+        }
         p {
             margin: 0;
             color: ${({ theme }) => theme.colors.gray};

@@ -10,7 +10,7 @@ export const theme = {
     blue: '#54ADFF',
     lightBlue: '#CCE4FB',
     // green: '#00C3AD',
-    // red: '#F43F5E',
+    red: '#F43F5E',
     // pagBlue:"#54ADFF",
     // pagWhite:"#FDF7F2",
   },

@@ -1,4 +1,5 @@
 import { BeerItemStyled } from "./beerListElems.styled";
+import { FaTrash } from "react-icons/fa";
 
 import Modal from "components/shared/Modal/Modal";
 import { useToggleModal } from "components/shared/Modal/utils/useToggleModal";
@@ -17,6 +18,8 @@ const BeerItem = ({itemData, isSelected, onRightClick}) => {
         <BeerItemStyled onClick={toggle} isSelected={isSelected} onContextMenu={handleContextMenu}>
 
             <div>
+                {isSelected && <button className="btn_remove" type="button"><FaTrash/></button>}
+                
                 <img src={image_url} alt="somebeer" />
 
                 <p>{description}</p>
