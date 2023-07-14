@@ -6,7 +6,7 @@ export const ListHeaderStyled = styled.div`
     align-items: center;
     gap:25px;
 
-    min-width: 320px;
+    max-width: 1280px;
     padding: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -33,6 +33,7 @@ export const ListHeaderStyled = styled.div`
 `;
 
 export const ListMainStyled = styled.div`
+    max-width: 1280px;
     min-height: calc(100vh - 95px);
     padding: 5px;
     margin-left: auto;
@@ -45,6 +46,7 @@ export const ListMainStyled = styled.div`
 
     ul {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
 
@@ -53,7 +55,7 @@ export const ListMainStyled = styled.div`
         list-style: none;
 
         li {
-            width: 260px;
+            width: 240px;
             // flex: auto;
         }
     }
