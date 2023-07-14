@@ -2,11 +2,11 @@ import styled from "@emotion/styled";
 
 export const ListHeaderStyled = styled.div`
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap:25px;
 
-    width: 320px;
+    min-width: 320px;
     padding: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -18,14 +18,21 @@ export const ListHeaderStyled = styled.div`
     h2 {
         color: ${({ theme }) => theme.colors.yellow};
     }
-`;
-export const ListMainStyled = styled.div`
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // gap:25px;
+    a {
+        height: 20px;
+        padding: 5px;
+        
+        font-weight: bolder;
+        text-align: center;
+        text-decoration: none;
 
-    // width: 320px;
+        color: ${({ theme }) => theme.colors.gray};
+        background: ${({ theme }) => theme.colors.yellow};
+        border-radius: 20px;
+    }
+`;
+
+export const ListMainStyled = styled.div`
     min-height: calc(100vh - 95px);
     padding: 5px;
     margin-left: auto;

@@ -16,9 +16,6 @@ export const BeerItemStyled = styled.div`
     div:first-of-type {
         box-sizing: border-box;
         position: relative;
-        // display: flex;
-        // flex-direction: column;
-        // gap: 2px;
         flex-grow: 1;
 
         width: 100%;
@@ -68,10 +65,48 @@ export const BeerItemStyled = styled.div`
         }
     }
 
+    // :active {
     :hover, :focus {
+        // @keyframes delay {
+        //     0% {
+        //         transform: translateY(0);
+        //     }
+        //     80% {
+        //         transform: translateY(0);
+        //     }
+        //     100% {
+        //         transform: translateY(-98%);
+        //     }
+        // }
         img {
-            transform: translateY(-98%);
+            // transform: translateY(-98%);
+            transform: rotateY(90deg);
+            
+            // animation: delay 1500ms linear forwards;
         }
     }
+`;
 
+export const BeerRecipeStyled = styled.div`
+    box-sizing: border-box;
+
+    width: 768px;
+    min-height: 320px;
+    padding: 10px;
+
+    color: ${({ theme }) => theme.colors.black};
+    border-radius: 20px;
+
+    p {
+        margin: 0;
+
+        text-align: start;
+        font-weight: bolder; 
+        color: ${({ theme }) => theme.colors.black};
+
+        span {
+            font-weight: normal;; 
+            color: ${({ theme }) => theme.colors.gray};
+        }
+    }
 `;

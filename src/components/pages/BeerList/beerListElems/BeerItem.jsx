@@ -1,10 +1,16 @@
-import { BeerItemStyled } from "./beerItem.styled";
+import { BeerItemStyled } from "./beerListElems.styled";
 
-const BeerItem = ({ itemData }) => {
+import Modal from "components/shared/Modal/Modal";
+import { useToggleModal } from "components/shared/Modal/utils/useToggleModal";
+import BeerRecipe from "./BeerRecipe";
+
+const BeerItem = ({itemData}) => {
+    const { isOpen, toggle } = useToggleModal(false);
     const { name, tagline, first_brewed, description, image_url, abv, ibu, ebc, srm, ph } = itemData;
+    // console.log(method);
 
     return (
-        <BeerItemStyled>
+        <BeerItemStyled onClick={toggle}>
 
             <div>
                 <img src={image_url} alt="somebeer" />
@@ -22,6 +28,12 @@ const BeerItem = ({ itemData }) => {
                 <h3>{name}</h3>
                 <p>{tagline}</p>
             </div>
+            
+            {isOpen &&
+                <Modal toggleModal={toggle}>
+                    <BeerRecipe itemData={itemData} />
+                </Modal>
+            }
         </BeerItemStyled>
     )
 };
