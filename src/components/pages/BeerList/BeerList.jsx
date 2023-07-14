@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import useStore from "store/store";
@@ -10,6 +10,7 @@ import Loader from "components/shared/Loader/Loader";
 
 
 const BeerList = () => {
+  const [selectedItems, setSelectedItems] = useState([]);
     const data = useStore((state) => state.data);
     const fetchData = useStore((state) => state.fetchData);
 
@@ -18,9 +19,17 @@ const BeerList = () => {
         fetchData();
     }, [fetchData]);
 
-    const list = data && data.map(it =>
+    const handleRightClick = (item) => {
+        if (selectedItems.includes(item)) {
+        setSelectedItems(selectedItems.filter((selectedItem) => selectedItem !== item));
+        } else {
+        setSelectedItems([...selectedItems, item]);
+        }
+    };
+
+    const list = data && data.slice(0,15).map(it =>
         <li key={it.id}>
-            <BeerItem itemData={it} />
+            <BeerItem itemData={it}  isSelected={selectedItems.includes(it)} onRightClick={handleRightClick}/>
         </li>
     );
 

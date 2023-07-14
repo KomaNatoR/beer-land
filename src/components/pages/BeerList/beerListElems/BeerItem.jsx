@@ -4,13 +4,17 @@ import Modal from "components/shared/Modal/Modal";
 import { useToggleModal } from "components/shared/Modal/utils/useToggleModal";
 import BeerRecipe from "./BeerRecipe";
 
-const BeerItem = ({itemData}) => {
+const BeerItem = ({itemData, isSelected, onRightClick}) => {
     const { isOpen, toggle } = useToggleModal(false);
     const { name, tagline, first_brewed, description, image_url, abv, ibu, ebc, srm, ph } = itemData;
-    // console.log(method);
+    
+    const handleContextMenu = (event) => {
+        event.preventDefault(); // Скасувати відображення контекстного меню браузера
+        onRightClick(itemData); // Передати обраний елемент до батьківського компонента
+    };
 
     return (
-        <BeerItemStyled onClick={toggle}>
+        <BeerItemStyled onClick={toggle} isSelected={isSelected} onContextMenu={handleContextMenu}>
 
             <div>
                 <img src={image_url} alt="somebeer" />

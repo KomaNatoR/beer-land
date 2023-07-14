@@ -7,8 +7,8 @@ export const BeerItemStyled = styled.div`
     // flex-basis: 320px;
     min-height: 100%;
 
-    background: ${({ theme }) => theme.colors.pureWhite};
-    border: 2px solid ${({ theme }) => theme.colors.yellow};
+    background: ${({ theme, isSelected}) => isSelected ? theme.colors.lightBlue : theme.colors.pureWhite};
+    border: 2px solid ${({ theme, isSelected}) => isSelected ? theme.colors.blue : theme.colors.yellow};
     border-radius: 20px;
     cursor: pointer;
     overflow: hidden;
@@ -63,6 +63,9 @@ export const BeerItemStyled = styled.div`
         p {
             color: ${({ theme }) => theme.colors.gray};
         }
+    }
+    .selected {
+        background: red;
     }
 
     :hover, :focus {
