@@ -6,9 +6,11 @@ const instance = axios.create({
 
 export const getBeers = async params => {
   try {
-      const response = await instance.get('/beers', { page: 1 });
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
-    return response.data;
+    const response = await instance.get('/beers', { page: 1 });
+
+  return response.data;
   } catch (error) {
     error(error.message);
   }
