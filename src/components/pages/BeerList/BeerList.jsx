@@ -13,23 +13,34 @@ const BeerList = () => {
   const [selectedItems, setSelectedItems] = useState([]);
     const data = useStore((state) => state.data);
     const fetchData = useStore((state) => state.fetchData);
+    const deleteItems = useStore((state) => state.deleteItems);
 
     useEffect(() => {
         // getBeers().then(data => setBeerState(data));
         fetchData();
     }, [fetchData]);
-
+    
+    const onTrashClick = () => {
+        const newData = data.filter((item) => !selectedItems.includes(item));
+        console.log("newData|-->", newData);
+        deleteItems(newData);
+    }
     const handleRightClick = (item) => {
         if (selectedItems.includes(item)) {
-        setSelectedItems(selectedItems.filter((selectedItem) => selectedItem !== item));
+            setSelectedItems(selectedItems.filter((selectedItem) => selectedItem !== item));
         } else {
-        setSelectedItems([...selectedItems, item]);
+            setSelectedItems([...selectedItems, item]);
         }
     };
 
     const list = data && data.slice(0,15).map(it =>
         <li key={it.id}>
-            <BeerItem itemData={it}  isSelected={selectedItems.includes(it)} onRightClick={handleRightClick}/>
+            <BeerItem
+                items={it}
+                isSelected={selectedItems.includes(it)}
+                onRightClick={handleRightClick}
+                onClick={onTrashClick}
+            />
         </li>
     );
 
@@ -37,7 +48,7 @@ const BeerList = () => {
         <>
             <ListHeaderStyled>
                 <Link to="/">Greeting page</Link>
-                <h2>I'm BeerList!</h2>
+                <h2>What do you like?</h2>
                 <Link to="/interesting">Interesting page</Link>
             </ListHeaderStyled>
             

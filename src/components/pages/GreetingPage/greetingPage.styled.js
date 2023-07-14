@@ -9,7 +9,7 @@ export const GreetingStyled = styled.div`
     width: 320px;
     min-height: 200px;
     padding: 10px;
-    margin-top: 10vh;
+    margin-top: 6vh;
     margin-left: auto;
     margin-right: auto;
 

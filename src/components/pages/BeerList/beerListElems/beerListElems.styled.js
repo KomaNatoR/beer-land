@@ -23,18 +23,19 @@ export const BeerItemStyled = styled.div`
 
         
         .btn_remove {
+            box-sizing: content-box;
             position: absolute;
-            top: 5px;
-            // left: 0;
-            right: 5px;
+            top: 0;
+            left: 0;
+            right: 0;
             z-index: 2;
 
-            width: 32px;
-            height: 32px;
+            // width: 32px;
+            height: 36px;
 
             background: ${({ theme }) => theme.colors.yellow};
-            border: 2px solid ${({ theme }) => theme.colors.blue};
-            border-radius: 50%;
+            border: 0px solid ${({ theme }) => theme.colors.blue};
+            border-radius: 20px 20px 0px 0px;
             cursor: pointer;
         }
         p {

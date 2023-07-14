@@ -5,20 +5,27 @@ import Modal from "components/shared/Modal/Modal";
 import { useToggleModal } from "components/shared/Modal/utils/useToggleModal";
 import BeerRecipe from "./BeerRecipe";
 
-const BeerItem = ({itemData, isSelected, onRightClick}) => {
+const BeerItem = (props) => {
     const { isOpen, toggle } = useToggleModal(false);
-    const { name, tagline, first_brewed, description, image_url, abv, ibu, ebc, srm, ph } = itemData;
+    const { items, isSelected, onRightClick, onClick } = props;
+    const { name, tagline, first_brewed, description, image_url, abv, ibu, ebc, srm, ph } = items;
     
     const handleContextMenu = (event) => {
         event.preventDefault(); // Скасувати відображення контекстного меню браузера
-        onRightClick(itemData); // Передати обраний елемент до батьківського компонента
+        onRightClick(items); // Передати обраний елемент до батьківського компонента
     };
+    const isOpenModal = (e) => {
+        if (e.target.type === "button" ||e.target.type === "svg" ||e.target.tagName === "path" ) return;
+        toggle();
+    }
 
     return (
-        <BeerItemStyled onClick={toggle} isSelected={isSelected} onContextMenu={handleContextMenu}>
+        <BeerItemStyled onClick={isOpenModal} isSelected={isSelected} onContextMenu={handleContextMenu}>
 
             <div>
-                {isSelected && <button className="btn_remove" type="button"><FaTrash/></button>}
+                {isSelected &&
+                    <button onClick={onClick} className="btn_remove" type="button" ><FaTrash /></button>
+                }
                 
                 <img src={image_url} alt="somebeer" />
 
@@ -38,7 +45,7 @@ const BeerItem = ({itemData, isSelected, onRightClick}) => {
             
             {isOpen &&
                 <Modal toggleModal={toggle}>
-                    <BeerRecipe itemData={itemData} />
+                    <BeerRecipe itemData={items} />
                 </Modal>
             }
         </BeerItemStyled>

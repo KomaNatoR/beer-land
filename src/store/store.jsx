@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 const useStore = create((set) => ({
   data: null,
-  fetchData: async params => {
+  fetchData: async (params) => {
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
 
@@ -13,6 +13,7 @@ const useStore = create((set) => ({
       console.error('Error fetching data:', error);
     }
   },
+  deleteItems: (newData) => set((state) => ({ data: newData })),
 }));
 
 export default useStore;

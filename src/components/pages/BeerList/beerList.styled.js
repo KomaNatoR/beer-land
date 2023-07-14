@@ -16,10 +16,10 @@ export const ListHeaderStyled = styled.div`
     border-radius: 20px;
 
     h2 {
-        color: ${({ theme }) => theme.colors.yellow};
+        color: ${({ theme }) => theme.colors.gray};
     }
     a {
-        height: 20px;
+        height: 22px;
         padding: 5px;
         
         font-weight: bolder;
@@ -28,7 +28,8 @@ export const ListHeaderStyled = styled.div`
 
         color: ${({ theme }) => theme.colors.gray};
         background: ${({ theme }) => theme.colors.yellow};
-        border-radius: 20px;
+        border: 2px solid ${({ theme }) => theme.colors.gray};
+        border-radius: 12px;
     }
 `;
 
