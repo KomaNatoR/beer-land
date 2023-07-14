@@ -16,20 +16,20 @@ const BeerRecipe = ({itemData}) => {
         <BeerRecipeStyled>
             <h2>Receipe:</h2>
             <p>Виробник: <span>{contributed_by.slice(0, contributed_by.length - 12)}</span></p>
-            <p>Інгредієнти:
+            <div>Інгредієнти:
                 <ul style={{listStyle:"none",margin:"0",paddingLeft:"20px"}}>
                     <li><span style={{fontWeight:"bold"}}>Солод: </span><span>{malts}.</span> </li>
                     <li><span style={{fontWeight:"bold"}}>Хміль: </span><span>{hops}.</span></li>
                     <li><span style={{fontWeight:"bold"}}>Дріжджі: </span><span>{yeast}.</span></li>
                 </ul>
-            </p>
-            <p>Процес варіння:
+            </div>
+            <div>Процес варіння:
                 <ul style={{listStyle:"none",margin:"0",paddingLeft:"20px"}}>
                     <li><span style={{ fontWeight: "bold" }}>Затирання: </span><span>{mashTemp}.</span></li>
                     <li><span style={{ fontWeight: "bold" }}>Бродіння: </span><span>{`${fermentation}C`}.</span></li>
                     <li>{features}</li>
                 </ul>
-            </p>
+            </div>
             <p>З чим самкує: <span>{food_pairing.join(", ")}. <strong>(Це брехня!!! Саме краще пиво смакує під тараньку, з ляща, по рецепту засолу мого брата! Ну на крайняк щука!)</strong></span></p>
             <p>Поради: <span>{brewers_tips}</span></p>
         </BeerRecipeStyled>

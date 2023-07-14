@@ -95,4 +95,16 @@ export const BeerRecipeStyled = styled.div`
             color: ${({ theme }) => theme.colors.gray};
         }
     }
+    div {
+        margin: 0;
+
+        text-align: start;
+        font-weight: bolder; 
+        color: ${({ theme }) => theme.colors.black};
+
+        span {
+            font-weight: normal;; 
+            color: ${({ theme }) => theme.colors.gray};
+        }
+    }
 `;
