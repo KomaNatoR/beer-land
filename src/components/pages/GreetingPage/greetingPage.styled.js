@@ -6,8 +6,9 @@ export const GreetingStyled = styled.div`
     align-items: center;
     gap:25px;
 
-    width: 250px;
-    height: 200px;
+    width: 320px;
+    min-height: 200px;
+    padding: 10px;
     margin-top: 10vh;
     margin-left: auto;
     margin-right: auto;

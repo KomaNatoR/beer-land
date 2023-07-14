@@ -25,7 +25,7 @@ const BeerList = () => {
             <ListHeaderStyled>
                 <Link to="/">First page</Link>
                 <h2>I'm BeerList!</h2>
-                <Link to="/">Interesting page</Link>
+                <Link to="/interesting">Interesting page</Link>
             </ListHeaderStyled>
             
             <ListMainStyled>
