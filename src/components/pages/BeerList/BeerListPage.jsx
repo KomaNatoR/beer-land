@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 
 import useStore from "store/store";
 
-// import { getBeers } from "API/Api";
-import { ListHeaderStyled, ListMainStyled } from "./beerList.styled";
+import { ListHeaderStyled, ListMainStyled } from "./beerListPage.styled";
 import BeerItem from "./beerListElems/BeerItem";
 import Loader from "components/shared/Loader/Loader";
 
 
-const BeerList = () => {
+const BeerListPage = () => {
   const [page, setPage] = useState(1);
   const [selectedItems, setSelectedItems] = useState([]);
     const data = useStore((state) => state.data);
@@ -18,7 +17,6 @@ const BeerList = () => {
 
     // console.log("page|-->", page);
     useEffect(() => {
-        // getBeers().then(data => setBeerState(data));
 
         fetchData(page);
     }, [fetchData, page]);
@@ -40,7 +38,7 @@ const BeerList = () => {
         }
     };
 
-    const list = data && data.slice(0,15).map(it =>
+    const list = data.slice(0,15).map(it =>
         <li key={it.id}>
             <BeerItem
                 items={it}
@@ -69,4 +67,4 @@ const BeerList = () => {
 };
 
 
-export default BeerList;
+export default BeerListPage;
