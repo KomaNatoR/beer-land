@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import useStore from "store/store";
+import { useRightClick } from "hooks/useRightClick";
 
 import { ListHeaderStyled, ListMainStyled } from "./beerListPage.styled";
 import BeerItem from "./beerListElems/BeerItem";
@@ -9,8 +10,9 @@ import Loader from "components/shared/Loader/Loader";
 
 
 const BeerListPage = () => {
-  const [page, setPage] = useState(1);
-  const [selectedItems, setSelectedItems] = useState([]);
+    const [page, setPage] = useState(1);
+    const { selectedItems, handleRightClick } = useRightClick();
+
     const data = useStore((state) => state.data);
     const fetchData = useStore((state) => state.fetchData);
     const deleteItems = useStore((state) => state.deleteItems);
@@ -30,15 +32,8 @@ const BeerListPage = () => {
             setPage(prev => prev + 1);
         }
     }
-    const handleRightClick = (item) => {
-        if (selectedItems.includes(item)) {
-            setSelectedItems(selectedItems.filter((selectedItem) => selectedItem !== item));
-        } else {
-            setSelectedItems([...selectedItems, item]);
-        }
-    };
 
-    const list = data.slice(0,15).map(it =>
+    const list = data.slice(0, 15).map(it =>
         <li key={it.id}>
             <BeerItem
                 items={it}
@@ -68,3 +63,13 @@ const BeerListPage = () => {
 
 
 export default BeerListPage;
+
+
+//   const [selectedItems, setSelectedItems] = useState([]);
+    // const handleRightClick = (item) => {
+    //     if (selectedItems.includes(item)) {
+    //         setSelectedItems(selectedItems.filter((selectedItem) => selectedItem !== item));
+    //     } else {
+    //         setSelectedItems([...selectedItems, item]);
+    //     }
+    // };

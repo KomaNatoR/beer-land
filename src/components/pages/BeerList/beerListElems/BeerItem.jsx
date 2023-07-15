@@ -10,8 +10,8 @@ const BeerItem = (props) => {
     const { items, isSelected, onRightClick, onClick } = props;
     const { name, tagline, first_brewed, description, image_url, abv, ibu, ebc, srm, ph } = items;
     
-    const handleContextMenu = (event) => {
-        event.preventDefault(); // Скасувати відображення контекстного меню браузера
+    const handleContextMenu = (e) => {
+        e.preventDefault();
         onRightClick(items); // Передати обраний елемент до батьківського компонента
     };
     const isOpenModal = (e) => {
