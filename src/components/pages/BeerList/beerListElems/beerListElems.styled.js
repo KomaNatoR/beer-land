@@ -56,8 +56,8 @@ export const BeerItemStyled = styled.div`
             height: 100%;
             object-fit: contain;
 
-            background: ${({ theme }) => theme.colors.gray};
-            border-radius: 20px 20px 0px 0px;
+            background: lightgray;
+            border-radius: 16px 16px 0px 0px;
             
             transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
         }

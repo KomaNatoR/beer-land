@@ -26,7 +26,11 @@ export const InterestingStyled = styled.div`
         color:${({theme})=>theme.colors.gray};
     }
     p {
-        color:${({theme})=>theme.colors.gray};
+        margin: 0;
+        color:${({ theme }) => theme.colors.gray};
+        span {
+            margin-left: 22px;
+        }
     }
 
     > div:first-of-type {
@@ -72,10 +76,11 @@ export const InterestingStyled = styled.div`
         background: ${({ theme }) => theme.colors.pureWhite};
 
     }
-    div:last-of-type {
+    > div:last-of-type {
         display: flex;
         flex-direction: column;
         gap: 8px;
+        margin-top: 22px;
     }
     .down_links {
         @keyframes ding {
