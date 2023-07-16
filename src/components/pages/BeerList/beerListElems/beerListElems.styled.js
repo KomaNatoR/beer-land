@@ -44,7 +44,7 @@ export const BeerItemStyled = styled.div`
 
             span {
                 font-weight: bold;
-                color: ${({ theme }) => theme.colors.black};
+                color: ${({ theme }) => theme.colors.gray};
             }
         }
         img {
@@ -75,7 +75,7 @@ export const BeerItemStyled = styled.div`
 
         h3 {
             margin: 0;
-            color: ${({ theme }) => theme.colors.black};
+            color: ${({ theme }) => theme.colors.yellow};
         }
         p {
             color: ${({ theme }) => theme.colors.gray};
@@ -100,7 +100,7 @@ export const BeerRecipeStyled = styled.div`
     min-height: 320px;
     padding: 0px 10px 40px 20px;
 
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.yellow};
     border-radius: 20px;
 
     p {
@@ -108,7 +108,7 @@ export const BeerRecipeStyled = styled.div`
 
         text-align: start;
         font-weight: bolder; 
-        color: ${({ theme }) => theme.colors.black};
+        color: ${({ theme }) => theme.colors.yellow};
 
         span {
             font-weight: normal;; 
@@ -120,7 +120,7 @@ export const BeerRecipeStyled = styled.div`
 
         text-align: start;
         font-weight: bolder; 
-        color: ${({ theme }) => theme.colors.black};
+        color: ${({ theme }) => theme.colors.yellow};
 
         span {
             font-weight: normal;; 

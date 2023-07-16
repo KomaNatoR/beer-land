@@ -9,7 +9,7 @@ export const InterestingStyled = styled.div`
 
     width: 480px;
     min-height: 200px;
-    padding: 10px;
+    padding: 0px 22px 12px 22px;
     margin-top: 6vh;
     margin-left: auto;
     margin-right: auto;
@@ -18,12 +18,18 @@ export const InterestingStyled = styled.div`
     border: 2px solid ${({ theme }) => theme.colors.yellow};
     border-radius: 0 20px 20px 20px;
 
-    h1 {
+    h2 {
         text-align: center;
         color:${({theme})=>theme.colors.yellow};
     }
+    h3 {
+        color:${({theme})=>theme.colors.gray};
+    }
+    p {
+        color:${({theme})=>theme.colors.gray};
+    }
 
-    .intpage_nav {
+    > div:first-of-type {
         position: absolute;
         top: -42px;
         left: -2px;

@@ -30,7 +30,7 @@ const BeerItem = (props) => {
                 <img src={image_url} alt="somebeer" />
 
                 <p>{description}</p>
-                <p>---------------------------------</p>
+                <p style={{color:"#FFC107"}}>-----------------------------------</p>
                 <p>Вперше зварено: <span>{first_brewed}</span></p>
                 <p>Вміст спирту: <span>{abv}</span></p>
                 <p>Гіркота: <span>{ibu}</span></p>

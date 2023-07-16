@@ -7,13 +7,13 @@ import { FaBeer } from "react-icons/fa";
 const InterestingPage = () => {
     return (
         <InterestingStyled>
-            <h1>Interesting facts!</h1>
-            <div className="intpage_nav">
+            <h2>Interesting facts!</h2>
+            <div>
                 <div style={{ position: "relative", width:"54px" }}>
-                    <NavLink to="/interesting/1" className={"int_pages"}>1</NavLink>
+                    <NavLink to="/interesting/1" className="int_pages">1</NavLink>
                 </div>
                 <div style={{position:"relative"}}>
-                    <NavLink to="/interesting/2" className={"int_pages"}>2</NavLink>
+                    <NavLink to="/interesting/2" className="int_pages">2</NavLink>
                 </div>
             </div>
 

@@ -3,7 +3,7 @@ import monk from "../../../../img/secod_page_monk.jpg"
 const ElemSecond = () => {
     return (
         <>
-            <h2>Ще по одній?</h2>
+            <h3>Ще по одній?</h3>
 
             <img style={{ width: "250px", height: "250px"}} src={monk} alt="monk" />
             <p>
