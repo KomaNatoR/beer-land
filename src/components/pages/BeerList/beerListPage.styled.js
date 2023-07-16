@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 
 export const ListHeaderStyled = styled.div`
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;

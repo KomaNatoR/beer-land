@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import useStore from "store/store";
-import { useRightClick } from "hooks/useRightClick";
-import { useHendleScroll } from "hooks/useHendleScroll";
+import { useRightClick } from "utils/hooks/useRightClick";
+import { useHendleScroll } from "utils/hooks/useHendleScroll";
 
+import ThemeSwitcher from "utils/themeSwitcher/switcher/ThemeSwitcher";
 import { ListHeaderStyled, ListMainStyled } from "./beerListPage.styled";
 import BeerItem from "./beerListElems/BeerItem";
 import Loader from "components/shared/Loader/Loader";
@@ -58,6 +59,8 @@ const BeerListPage = () => {
                 <Link to="/">Greeting page</Link>
                 <h2>What do you like?</h2>
                 <Link to="/interesting">Interesting page</Link>
+                
+                <ThemeSwitcher/>
             </ListHeaderStyled>
             
             <ListMainStyled>

@@ -1,12 +1,12 @@
-export const theme = {
+export const themeDark = {
   colors: {
     yellow: '#FFC107',
-    white: '#FDF7F2',
-    pureWhite: '#FFFFFF',
+    white: '#111111',
+    pureWhite: '#111111',
     gray: '#888888',
-    lightGray: "#D3D3D3",
-    black: '#111111',
-    puerBlack: '#000000',
+    lightGray: "#888888",
+    black: '#FDF7F2',
+    puerBlack: '#FFC107',
     // gradBlue: 'linear-gradient(290.46deg, #419EF1 0%, #9BD0FF 107.89%)',
     blue: '#54ADFF',
     lightBlue: '#CCE4FB',

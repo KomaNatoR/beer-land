@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 
-import ElemOne from "./ElemOne";
-import ElemSecond from "./ElemSecond";
+import {ElemFirst, ElemSecond} from "./index";
 
 const ElemMain = () => {
     const { intId } = useParams();
@@ -11,7 +10,7 @@ const ElemMain = () => {
 
     return (
         <div style={{display:"flex", flexDirection:"column",alignItems:"center"}}>
-            {firsElem && <ElemOne/>}
+            {firsElem && <ElemFirst/>}
             {secondElem && <ElemSecond/>}
         </div>
     )

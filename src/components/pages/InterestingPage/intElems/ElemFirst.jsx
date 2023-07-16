@@ -1,4 +1,4 @@
-const ElemOne = () => {
+const ElemFirst = () => {
     return (
         <>
             <h3>Губить лососів не пиво: Popular Science</h3>
@@ -33,4 +33,4 @@ const ElemOne = () => {
 };
 
 
-export default ElemOne;
+export default ElemFirst;

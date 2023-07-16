@@ -10,6 +10,8 @@ export const BeerItemStyled = styled.div`
     background: ${({ theme, isSelected}) => isSelected ? theme.colors.lightBlue : theme.colors.pureWhite};
     border: 2px solid ${({ theme, isSelected}) => isSelected ? theme.colors.blue : theme.colors.yellow};
     border-radius: 20px;
+    box-shadow: ${({ theme }) => theme.shadows.small};
+
     cursor: pointer;
     overflow: hidden;
 
@@ -56,7 +58,7 @@ export const BeerItemStyled = styled.div`
             height: 100%;
             object-fit: contain;
 
-            background: lightgray;
+            background: ${({ theme }) => theme.colors.lightGray};;
             border-radius: 16px 16px 0px 0px;
             
             transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -81,13 +83,9 @@ export const BeerItemStyled = styled.div`
             color: ${({ theme }) => theme.colors.gray};
         }
     }
-    .selected {
-        background: red;
-    }
 
     :hover, :focus {
         img {
-            // transform: translateY(-98%);
             transform: rotateY(90deg);
         }
     }
