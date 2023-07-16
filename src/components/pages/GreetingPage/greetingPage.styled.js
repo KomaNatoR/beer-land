@@ -67,4 +67,12 @@ export const GreetingStyled = styled.div`
             }
         }
     }
-`;//pureWhite
+    a.active {
+        padding: 8px 20px;
+        color: ${({ theme }) => theme.colors.blue};
+        border: 2px solid ${({ theme }) => theme.colors.blue};
+    }
+    .int_pages {
+        border-radius: 12px;
+    }
+`;

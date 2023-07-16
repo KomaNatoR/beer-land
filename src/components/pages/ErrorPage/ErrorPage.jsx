@@ -9,7 +9,7 @@ const ErrorPage = () => {
         <GreetingStyled>
             <h1>Sorry this beer do not exist!</h1>
 
-            <Link to="/">
+            <Link to="/beerlist">
                 <FaBeer />
                 One more mug!
             </Link>
