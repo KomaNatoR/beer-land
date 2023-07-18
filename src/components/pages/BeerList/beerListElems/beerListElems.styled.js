@@ -49,6 +49,9 @@ export const BeerItemStyled = styled.div`
                 color: ${({ theme }) => theme.colors.gray};
             }
         }
+        .line {
+            color: ${({ theme }) => theme.colors.yellow};
+        }
         img {
             position: absolute;
             top: 0;
