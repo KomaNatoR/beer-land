@@ -31,12 +31,12 @@ const BeerItem = (props) => {
 
                 <p>{description}</p>
                 <p className="line">-----------------------------------</p>
-                <p>Вперше зварено: <span>{first_brewed}</span></p>
-                <p>Вміст спирту: <span>{abv}</span></p>
-                <p>Гіркота: <span>{ibu}</span></p>
+                <p>Вперше зварено: <span>{first_brewed ? first_brewed : "no data"}</span></p>
+                <p>Вміст спирту: <span>{abv ? abv : "no data"}</span></p>
+                <p>Гіркота: <span>{ibu ? ibu : "no data"}</span></p>
                 <p>Колір по EBC: <span>{ebc ? ebc : "no data"}</span></p>
                 <p>Колір по SRM:  <span>{srm ? srm : "no data"}</span></p>
-                <p>ph: <span>{ph}</span></p>
+                <p>ph: <span>{ph ? ph : "no data"}</span></p>
             </div>
             <div>
                 <h3>{name}</h3>
