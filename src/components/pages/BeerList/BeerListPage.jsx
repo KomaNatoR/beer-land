@@ -65,9 +65,9 @@ const BeerListPage = () => {
             </ListHeaderStyled>
             
             <ListMainStyled>
-                {!isLoading
-                    ? <ul>{list}</ul>
-                    : <Loader />}
+                <ul>{list}</ul>
+                {isLoading && <Loader />}
+                    
                 {error
                     && <p className="error_p">Sorry, something went wrong!</p>
                 }
