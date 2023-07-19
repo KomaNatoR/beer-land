@@ -62,4 +62,8 @@ export const ListMainStyled = styled.div`
             // flex: auto;
         }
     }
+    .error_p {
+        text-align: center;
+        color: ${({ theme }) => theme.colors.gray};
+    }
 `;

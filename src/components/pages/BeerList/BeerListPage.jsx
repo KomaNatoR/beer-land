@@ -15,7 +15,7 @@ const BeerListPage = () => {
     const { selectedItems, handleRightClick } = useRightClick();
     const {listStart, listEnd} = useHendleScroll();
 
-    const { data } = useStore((state) => state.data);
+    const { data, isLoading, error } = useStore((state) => state.data);
     const fetchData = useStore((state) => state.fetchData);
     const deleteItems = useStore((state) => state.deleteItems);
 
@@ -64,9 +64,10 @@ const BeerListPage = () => {
             </ListHeaderStyled>
             
             <ListMainStyled>
-                <ul>
-                    {data.length !== 0 ? list : <Loader />}
-                </ul>
+                    {!isLoading
+                        ? <ul>{list}</ul>
+                        : <Loader />}
+                    {error&&<p className="error_p">Sorry, something went wrong!</p>}
 
             </ListMainStyled>
         </>
