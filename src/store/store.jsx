@@ -17,7 +17,7 @@ const useStore = create((set, get) => ({
 
     try {
       await new Promise(resolve => setTimeout(resolve, 1200));
-      const fetchingPage = await get().data.page;
+      const fetchingPage = get().data.page;
       const response = await fetch(`https://api.punkapi.com/v2/beers?page=${fetchingPage}`);
       const fetchedData = await response.json();
 

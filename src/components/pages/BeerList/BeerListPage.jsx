@@ -39,8 +39,9 @@ const BeerListPage = () => {
         };
     };
 
-    // console.log("listStart|-->",listStart);
-    // console.log("listEnd  |-->",listEnd);
+    console.log("listStart|-->", listStart);
+    console.log("listEnd  |-->", listEnd);
+    // const checkedStart = listStart > 0 ? listStart : 0;
     const list = data.slice(listStart, listEnd).map(it =>
         <li key={it.id}>
             <BeerItem
@@ -64,11 +65,12 @@ const BeerListPage = () => {
             </ListHeaderStyled>
             
             <ListMainStyled>
-                    {!isLoading
-                        ? <ul>{list}</ul>
-                        : <Loader />}
-                    {error&&<p className="error_p">Sorry, something went wrong!</p>}
-
+                {!isLoading
+                    ? <ul>{list}</ul>
+                    : <Loader />}
+                {error
+                    && <p className="error_p">Sorry, something went wrong!</p>
+                }
             </ListMainStyled>
         </>
     )

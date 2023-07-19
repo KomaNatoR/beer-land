@@ -12,11 +12,11 @@ export const useHendleScroll = () => {
     
     const handleScroll = useCallback(async() => {
         const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-        if (scrollTop < 120 && listStart !== 0) {
-            // console.log("FIRST_IF");
-            setListStart(prev => prev - 5);
-            setListEnd(prev => prev - 5);
-        };
+        // if (scrollTop < 110) {
+        //     // console.log("FIRST_IF"); && listStart >= 5
+        //     setListStart(prev => prev - 5);
+        //     setListEnd(prev => prev - 5);
+        // };
         // console.log("scrollTop   |-->",scrollTop);
         // console.log("clientHeight|-->",clientHeight);
         // console.log("SUM         |-->",scrollTop+clientHeight);
@@ -26,11 +26,11 @@ export const useHendleScroll = () => {
         // console.log("listEnd     |-->",listEnd);
 
         if (data.length === listEnd) return;
-        if (scrollTop + clientHeight >= scrollHeight - 20) {
+        if (scrollTop + clientHeight >= scrollHeight - 10) {
             setListStart(prev => prev + 5);
             setListEnd(prev => prev + 5);
         };
-    }, [data.length, listEnd, listStart]);
+    }, [data.length, listEnd]);
     
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
