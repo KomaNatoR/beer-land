@@ -7,6 +7,7 @@ export const themeDark = {
     lightGray: "#888888",
     black: '#FDF7F2',
     puerBlack: '#FFC107',
+    scrollButtBlack: '#D3D3D3',
     // gradBlue: 'linear-gradient(290.46deg, #419EF1 0%, #9BD0FF 107.89%)',
     blue: '#CCE4FB',
     lightBlue: '#CCE4FB',

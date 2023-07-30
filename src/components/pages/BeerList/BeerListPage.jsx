@@ -9,6 +9,8 @@ import ThemeSwitcher from "utils/themeSwitcher/switcher/ThemeSwitcher";
 import { ListHeaderStyled, ListMainStyled } from "./beerListPage.styled";
 import BeerItem from "./beerListElems/BeerItem";
 import Loader from "components/shared/Loader/Loader";
+import { ToTopButton } from "components/shared/ScrollButtons";
+import { ToDownButton } from "components/shared/ScrollButtons";
 
 
 const BeerListPage = () => {
@@ -73,6 +75,9 @@ const BeerListPage = () => {
                     && <p className="error_p">Sorry, something went wrong!</p>
                 }
             </ListMainStyled>
+
+            <ToTopButton/>
+            <ToDownButton/>
         </>
     )
 };
