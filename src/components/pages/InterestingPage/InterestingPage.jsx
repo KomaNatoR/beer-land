@@ -12,8 +12,11 @@ const InterestingPage = () => {
                 <div style={{ position: "relative", width:"54px" }}>
                     <NavLink to="/interesting/1" className="int_pages">1</NavLink>
                 </div>
-                <div style={{position:"relative"}}>
+                <div style={{position:"relative", width:"54px"}}>
                     <NavLink to="/interesting/2" className="int_pages">2</NavLink>
+                </div>
+                <div style={{position:"relative", width:"54px"}}>
+                    <NavLink to="/interesting/3" className="int_pages">3</NavLink>
                 </div>
             </div>
 

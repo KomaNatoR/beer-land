@@ -20,7 +20,7 @@ const BeerListPage = () => {
     const deleteItems = useStore((state) => state.deleteItems);
 
     useEffect(() => {
-        if (data.length && data.length - listEnd <= 5) {fetchData()};
+        if (data.length && data.length - listEnd <= 5) { fetchData() };
         if (data.length) return;
         console.log("EFFECT");
 
@@ -42,6 +42,7 @@ const BeerListPage = () => {
     // console.log("listStart|-->", listStart);
     // console.log("listEnd  |-->", listEnd);
     // const checkedStart = listStart > 0 ? listStart : 0;
+    // const checkedEnd = listStart > 0 ? listEnd : 15;
     const list = data.slice(listStart, listEnd).map(it =>
         <li key={it.id}>
             <BeerItem

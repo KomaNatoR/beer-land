@@ -4,7 +4,8 @@ import useStore from "store/store";
 
 
 export const useHendleScroll = () => {
-    const [listStart, setListStart] = useState(0);
+    const listStart = 0;
+    // const [listStart, setListStart] = useState(0);
     const [listEnd, setListEnd] = useState(15);
     
     const { data } = useStore((state) => state.data);
@@ -27,7 +28,7 @@ export const useHendleScroll = () => {
 
         if (data.length === listEnd) return;
         if (scrollTop + clientHeight >= scrollHeight - 10) {
-            setListStart(prev => prev + 5);
+            // setListStart(prev => prev + 5);
             setListEnd(prev => prev + 5);
         };
     }, [data.length, listEnd]);
