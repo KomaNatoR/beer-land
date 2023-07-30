@@ -87,9 +87,10 @@ export const ToDownButtStyled = styled.div`
         display: none;
 
         position: absolute;
-        top: -74px;
+        top: -66px;
         right: 38px;
 
+        width: 60px;
         font-weight: bold;
 
         color: ${({ theme }) => theme.colors.black};

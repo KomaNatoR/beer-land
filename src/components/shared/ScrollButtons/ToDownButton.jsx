@@ -41,7 +41,7 @@ const ToDownButton = () => {
       {isVisible &&
         <ToDownButtStyled>
           <BsFillChatRightFill className='chat_svg'/>
-          <p>На дно бокала!</p>
+          <p>На дно!</p>
           <FaAngleDoubleDown className='shevron_svg' onClick={scrollToDown} />
         </ToDownButtStyled>
       }
