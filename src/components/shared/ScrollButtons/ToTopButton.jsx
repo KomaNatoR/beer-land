@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { ToTopButtStyled, TopTextStyled } from "./ScrollButtons.styled";
+import { ToTopButtStyled } from "./ScrollButtons.styled";
 import { FaAngleDoubleUp } from "react-icons/fa";
 import { BsFillChatRightFill } from "react-icons/bs";
 
