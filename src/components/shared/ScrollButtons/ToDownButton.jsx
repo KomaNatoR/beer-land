@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { ToDownButtStyled } from "./ScrollButtons.styled";
 import { FaAngleDoubleDown } from "react-icons/fa";
+import { BsFillChatRightFill } from "react-icons/bs";
 
 
 const ToDownButton = () => {
@@ -39,7 +40,9 @@ const ToDownButton = () => {
     <>
       {isVisible &&
         <ToDownButtStyled>
-          <FaAngleDoubleDown onClick={scrollToDown} />
+          <BsFillChatRightFill className='chat_svg'/>
+          <p>На дно бокала!</p>
+          <FaAngleDoubleDown className='shevron_svg' onClick={scrollToDown} />
         </ToDownButtStyled>
       }
     </>

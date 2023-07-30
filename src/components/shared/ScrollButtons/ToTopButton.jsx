@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import { ToTopButtStyled } from "./ScrollButtons.styled";
+import { ToTopButtStyled, TopTextStyled } from "./ScrollButtons.styled";
 import { FaAngleDoubleUp } from "react-icons/fa";
+import { BsFillChatRightFill } from "react-icons/bs";
 
 
 const ToTopButton = () => {
@@ -33,7 +34,9 @@ const ToTopButton = () => {
     <>
       {isVisible &&
         <ToTopButtStyled>
-          <FaAngleDoubleUp onClick={scrollToTop} />
+          <BsFillChatRightFill className='chat_svg'/>
+          <p>Догори!</p>
+          <FaAngleDoubleUp className='shevron_svg' onClick={scrollToTop} />
         </ToTopButtStyled>
       }
     </>

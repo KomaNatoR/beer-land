@@ -16,7 +16,37 @@ export const ToTopButtStyled = styled.div`
     background: ${({ theme }) => theme.colors.scrollButtBlack};
     cursor: pointer;
 
-    svg {
+    :hover .chat_svg,
+    :hover p {
+        display: block;
+    }
+    .chat_svg {
+        display: none;
+
+        position: absolute;
+        top: -70px;
+        right: 30px;
+        
+        width: 80px;
+        height: 80px;
+
+        fill: ${({ theme }) => theme.colors.yellow};
+    }
+    p {
+        display: none;
+
+        position: absolute;
+        top: -66px;
+        right: 38px;
+
+        font-weight: bold;
+
+        color: ${({ theme }) => theme.colors.black};
+    }
+    .shevron_svg {
+        fill: ${({ theme }) => theme.colors.gray};
+    }
+    :hover .shevron_svg {
         fill: ${({ theme }) => theme.colors.yellow};
     }
 `;
@@ -37,7 +67,37 @@ export const ToDownButtStyled = styled.div`
     background: ${({ theme }) => theme.colors.scrollButtBlack};
     cursor: pointer;
 
-    svg {
+    :hover .chat_svg,
+    :hover p {
+        display: block;
+    }
+    .chat_svg {
+        display: none;
+
+        position: absolute;
+        top: -70px;
+        right: 30px;
+        
+        width: 80px;
+        height: 80px;
+
+        fill: ${({ theme }) => theme.colors.yellow};
+    }
+    p {
+        display: none;
+
+        position: absolute;
+        top: -74px;
+        right: 38px;
+
+        font-weight: bold;
+
+        color: ${({ theme }) => theme.colors.black};
+    }
+    .shevron_svg {
+        fill: ${({ theme }) => theme.colors.gray};
+    }
+    :hover .shevron_svg {
         fill: ${({ theme }) => theme.colors.yellow};
     }
 `;
